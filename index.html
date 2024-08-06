@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nasi Galung</title>
+    <style>
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        .navbar {
+            background-color: #333;
+            color: white;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .navbar img {
+            height: 50px;
+        }
+        .navbar .contact {
+            font-size: 14px;
+            text-align: right;
+        }
+        .header {
+            background-color: #FF0202;
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .header h1 {
+            font-size: 2.5em;
+            margin: 0;
+        }
+        .header p {
+            margin: 10px 0 0;
+            font-size: 1.2em;
+        }
+        .menu {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .menu h2 {
+            text-align: center;
+            color: #FF0202;
+            font-size: 2em;
+        }
+        .menu ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .menu ul li {
+            display: flex;
+            padding: 20px 0;
+            border-bottom: 1px solid #eee;
+        }
+        .menu ul li img {
+            height: 100px;
+            width: 100px;
+            border-radius: 8px;
+            object-fit: cover;
+            margin-right: 20px;
+        }
+        .menu ul li .item-details {
+            flex-grow: 1;
+        }
+        .menu .item-name {
+            font-weight: bold;
+            font-size: 1.5em;
+            margin: 0;
+        }
+        .menu .item-price {
+            color: #FF0202;
+            font-size: 1.2em;
+            margin: 5px 0;
+        }
+        .menu .item-description {
+            margin: 10px 0 0;
+            color: #666;
+        }
+        .footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <img src="Resources/logo.png" alt="Nasi Galung Logo">
+        <div class="contact">
+            <p>Phone: +62 8122882701</p>
+            <p>Email: rm.galung@gmail.com</p>
+        </div>
+    </div>
+
+    <div class="header">
+        <h1>Welcome to Nasi Galung</h1>
+        <p>Indonesian Cuisine</p>
+    </div>
+
+    <div class="menu">
+        <h2>Our Menu</h2>
+        <ul id="food-menu">
+            <!-- Menu items will be inserted here -->
+        </ul>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2024 Nasi Galung. All rights reserved.</p>
+    </div>
+
+    <script>
+        // Array of food items, prices, descriptions, and placeholder images
+        const menuItems = [
+            { name: "Nasi Galung", price: 22000, description: "Aduk nasinya & rasakan sensasi pedas yang unik.", image: "Resources/Foods/nasi galung.jpg" },
+            { name: "Manyung Sambal", price: 27000, description: "Tekstur garing gurih dengan pedas yang pas.", image: "Resources/Foods/manyung sambal.jpg" },
+            { name: "Ayam Goreng Mercon", price: 27000, description: "Pedesnya membuatmu ga bisa lupa dan nagih.", image: "Resources/Foods/ayam goreng sambel mercon.jpg" },
+            { name: "Manyung Goreng", price: 22000, description: "Pendamping Nasi Galung yang bisa diandalkan.", image: "Resources/Foods/manyung goreng.jpg" },
+            { name: "Rendang Sapi", price: 22000, description: "Dimasak perlahan hingga bumbu meresap sempurna.", image: "Resources/Foods/rendang sapi.jpg" },
+            { name: "Ayam Goreng", price: 22000, description: "Disajikan panas. Rasanya gurih, lezat tak terlupakan.", image: "Resources/Foods/ayam goreng.jpg" },
+            { name: "Nasi Putih", price: 7000, description: "Nasi putih pulen.", image: "Resources/Foods/nasi putih.jpg" },
+            { name: "Ayam Rendang", price: 22000, description: "Bumbunya meresap sampai ke tulang.", image: "Resources/Foods/ayam rendang.jpg" },
+            { name: "Tahu Gulai", price: 5000, description: "Teksturnya lembut & lumer di mulut.", image: "Resources/Foods/tahu gulai.jpg" },
+            { name: "Perkedel Kentang", price: 5000, description: "Rasa kentangnya gurih dan berbumbu.", image: "Resources/Foods/perkedel kentang.jpg" },
+            { name: "Telur Balado", price: 7000, description: "Telur Balado.", image: "Resources/Foods/telur balado.jpg" },
+            { name: "Telur Dadar", price: 7000, description: "Telur Dadar.", image: "Resources/Foods/telur dadar.jpg" },
+            { name: "Telur Gulai", price: 7000, description: "Telur Gulai.", image: "Resources/Foods/telur gulai.jpg" },
+            { name: "Telur Rendang", price: 7000, description: "Telur Rendang.", image: "Resources/Foods/telur rendang.jpg" },
+            { name: "Sambel Balado", price: 5000, description: "Sambel Balado.", image: "Resources/Foods/sambel balado.jpg" },
+            { name: "Sambel Ijo", price: 5000, description: "Sambel Ijo.", image: "Resources/Foods/sambel ijo.jpg" },
+            { name: "Sambel Mercon", price: 5000, description: "Sambel Mercon.", image: "Resources/Foods/sambel mercon.jpg" },
+        ];
+
+        // Function to display menu items
+        function displayMenu() {
+            const menuList = document.getElementById("food-menu");
+            menuItems.forEach(item => {
+                const listItem = document.createElement("li");
+                listItem.innerHTML = `
+                    <img src="${item.image}" alt="${item.name}">
+                    <div class="item-details">
+                        <span class="item-name">${item.name}</span>
+                        <span class="item-price">Rp${item.price.toLocaleString()}</span>
+                        <span class="item-description">${item.description}</span>
+                    </div>
+                `;
+                menuList.appendChild(listItem);
+            });
+        }
+
+        // Display the menu on page load
+        window.onload = displayMenu;
+    </script>
+</body>
+</html>
