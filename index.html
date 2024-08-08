@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nasi Galung</title>
     <style>
-        body {
+       body {
             font-family: 'Helvetica Neue', Arial, sans-serif;
             background-color: #f2f2f2;
             margin: 0;
@@ -27,6 +27,10 @@
         .navbar .contact {
             font-size: 14px;
             text-align: right;
+        }
+        .contact {
+            display: flex;
+            gap: 0.5rem;
         }
         .header {
             background-color: #FF0202;
@@ -73,7 +77,12 @@
             object-fit: cover;
             margin-right: 20px;
         }
-        .menu ul li .item-details {
+        .items-details{
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+        .menu ul li {
             flex-grow: 1;
         }
         .menu .item-name {
@@ -99,16 +108,57 @@
             bottom: 0;
             width: 100%;
         }
-        .footer .whatsapp-contact {
+        .whatsapp-button {
+            position: fixed;
+            bottom: 2.5rem;
+            right: 2.5rem;
             display: flex;
-            justify-content: center;
             align-items: center;
+            background-color: #16a34a;
+            border-radius: 50px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            padding: 10px 20px;
+            font-size: 16px;
+            color: white;
+            text-decoration: none;
         }
-        .footer .whatsapp-contact img {
-            height: 24px;
+        .whatsapp-button i {
             margin-right: 10px;
+            color: #25D366;
+        }
+
+        /* Responsive styles */
+        @media (max-width: 768px) {
+            .navbar .contact {
+                font-size: 12px;
+            }
+            .whatsapp-button {
+                bottom: 1.5rem;
+                right: 1.5rem;
+                padding: 8px 16px;
+                font-size: 14px;
+            }
+            .whatsapp-button i {
+                font-size: 14px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .navbar .contact {
+                font-size: 10px;
+            }
+            .whatsapp-button {
+                bottom: 1rem;
+                right: 1rem;
+                padding: 6px 12px;
+                font-size: 12px;
+            }
+            .whatsapp-button i {
+                font-size: 12px;
+            }
         }
     </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
     <div class="navbar">
@@ -133,11 +183,12 @@
 
     <div class="footer">
         <p>&copy; 2024 Nasi Galung. All rights reserved.</p>
-        <div class="whatsapp-contact">
-            <img src="Resources/whatsapp-icon.png" alt="WhatsApp Icon">
-            <a href="https://wa.me/628122882701" style="color: white;">Contact us on WhatsApp: +62 8122882701</a>
-        </div>
     </div>
+
+    <a href="https://wa.me/c/6281210107856" class="whatsapp-button">
+        <i class="fa fa-whatsapp" style="color: white;"></i>
+        Ask, Me!
+    </a>
 
     <script>
         // Array of food items, prices, descriptions, and placeholder images
@@ -169,9 +220,9 @@
                 listItem.innerHTML = `
                     <img src="${item.image}" alt="${item.name}">
                     <div class="item-details">
-                        <span class="item-name">${item.name}</span>
-                        <span class="item-price">Rp${item.price.toLocaleString()}</span>
-                        <span class="item-description">${item.description}</span>
+                        <p class="item-name">${item.name}</p>
+                        <p class="item-price">Rp${item.price.toLocaleString()}</span>
+                        <p class="item-description">${item.description}</span>
                     </div>
                 `;
                 menuList.appendChild(listItem);
