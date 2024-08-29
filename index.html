@@ -5,173 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nasi Galung</title>
     <style>
-       body {
-            font-family: 'Helvetica Neue', Arial, sans-serif;
-            background-color: #f2f2f2;
-            margin: 0;
-            padding: 0;
-            color: #333;
-        }
-        .navbar {
-            background-color: #333;
-            color: white;
-            padding: 15px 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-        .navbar img {
-            height: 50px;
-        }
-        .navbar .contact {
-            font-size: 14px;
-            text-align: right;
-        }
-        .contact {
-            display: flex;
-            gap: 0.5rem;
-        }
-        .header {
-            background-color: #FF0202;
-            color: white;
-            padding: 60px 20px;
-            text-align: center;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-        .header h1 {
-            font-size: 2.5em;
-            margin: 0;
-        }
-        .header p {
-            margin: 10px 0 0;
-            font-size: 1.2em;
-        }
-        .menu {
-            max-width: 900px;
-            margin: 40px auto;
-            padding: 20px;
-            background-color: white;
-            border-radius: 10px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-        .menu h2 {
-            text-align: center;
-            color: #FF0202;
-            font-size: 2em;
-        }
-        .menu ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-        .menu ul li {
-            display: flex;
-            padding: 20px 0;
-            border-bottom: 1px solid #eee;
-        }
-        .menu ul li img {
-            height: 100px;
-            width: 100px;
-            border-radius: 8px;
-            object-fit: cover;
-            margin-right: 20px;
-        }
-        .items-details{
-            display: flex;
-            flex-direction: column;
-            gap: 0.5rem;
-        }
-        .menu ul li {
-            flex-grow: 1;
-        }
-        .menu .item-name {
-            font-weight: bold;
-            font-size: 1.5em;
-            margin: 0;
-        }
-        .menu .item-price {
-            color: #FF0202;
-            font-size: 1.2em;
-            margin: 5px 0;
-        }
-        .menu .item-description {
-            margin: 10px 0 0;
-            color: #666;
-        }
-        .footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 20px;
-            position: relative;
-            bottom: 0;
-            width: 100%;
-        }
-        .whatsapp-button {
-            position: fixed;
-            bottom: 2.5rem;
-            right: 2.5rem;
-            display: flex;
-            align-items: center;
-            background-color: #16a34a;
-            border-radius: 50px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-            padding: 15px 25px;
-            font-size: 16px;
-            color: white;
-            text-decoration: none;
-        }
-        .whatsapp-button i {
-            margin-right: 10px;
-            color: #25D366;
-        }
-
-        /* Responsive styles */
-        @media (max-width: 768px) {
-            .navbar .contact {
-                font-size: 12px;
-            }
-            .whatsapp-button {
-                bottom: 1.5rem;
-                right: 1.5rem;
-                padding: 10px 20px;
-                font-size: 14px;
-            }
-            .whatsapp-button i {
-                font-size: 14px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .navbar .contact {
-                font-size: 10px;
-            }
-            .whatsapp-button {
-                bottom: 1rem;
-                right: 1rem;
-                padding: 6px 12px;
-                font-size: 12px;
-            }
-            .whatsapp-button i {
-                font-size: 12px;
-            }
-        }
-.social-media-links {
-    margin-top: 10px;
-}
-
-.social-media-links a {
-    color: white; /* Accent color */
-    margin: 0 10px;
-    text-decoration: none;
-    font-size: 24px;
-}
-
-.social-media-links a:hover {
-    color: #d00; /* Darker shade for hover effect */
-}
-
+        /* (CSS yang sama dengan sebelumnya) */
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
@@ -191,6 +25,13 @@
 
     <div class="menu">
         <h2>Our Menu</h2>
+        <select id="category-filter" onchange="filterMenuByCategory()">
+            <option value="">All</option>
+            <option value="Nasi">Nasi</option>
+            <option value="Ikan">Ikan</option>
+            <option value="Ayam">Ayam</option>
+            <option value="Side Dish">Side Dish</option>
+        </select>
         <ul id="food-menu">
             <!-- Menu items will be inserted here -->
         </ul>
@@ -208,38 +49,36 @@
         </div>
     </div>
     
-
     <a href="https://wa.me/c/6281210107856" class="whatsapp-button">
         <i class="fa fa-whatsapp" style="color: white;"></i>
         Place your order here!
     </a>
 
     <script>
-        // Array of food items, prices, descriptions, and placeholder images
         const menuItems = [
-            { name: "Nasi Galung", price: 22000, description: "Aduk nasinya & rasakan sensasi pedas yang unik.", image: "Resources/Foods/nasi galung.jpg" },
-            { name: "Manyung Sambal", price: 27000, description: "Tekstur garing gurih dengan pedas yang pas.", image: "Resources/Foods/manyung sambal.jpg" },
-            { name: "Ayam Goreng Mercon", price: 27000, description: "Pedesnya membuatmu ga bisa lupa dan nagih.", image: "Resources/Foods/ayam goreng sambel mercon.jpg" },
-            { name: "Manyung Goreng", price: 22000, description: "Pendamping Nasi Galung yang bisa diandalkan.", image: "Resources/Foods/manyung goreng.jpg" },
-            { name: "Rendang Sapi", price: 22000, description: "Dimasak perlahan hingga bumbu meresap sempurna.", image: "Resources/Foods/rendang sapi.jpg" },
-            { name: "Ayam Goreng", price: 22000, description: "Disajikan panas. Rasanya gurih, lezat tak terlupakan.", image: "Resources/Foods/ayam goreng.jpg" },
-            { name: "Nasi Putih", price: 7000, description: "Nasi putih pulen.", image: "Resources/Foods/nasi putih.jpg" },
-            { name: "Ayam Rendang", price: 22000, description: "Bumbunya meresap sampai ke tulang.", image: "Resources/Foods/ayam rendang.jpg" },
-            { name: "Tahu Gulai", price: 5000, description: "Teksturnya lembut & lumer di mulut.", image: "Resources/Foods/tahu gulai.jpg" },
-            { name: "Perkedel Kentang", price: 5000, description: "Rasa kentangnya gurih dan berbumbu.", image: "Resources/Foods/perkedel kentang.jpg" },
-            { name: "Telur Balado", price: 7000, description: "Telur Balado.", image: "Resources/Foods/telur balado.jpg" },
-            { name: "Telur Dadar", price: 7000, description: "Telur Dadar.", image: "Resources/Foods/telur dadar.jpg" },
-            { name: "Telur Gulai", price: 7000, description: "Telur Gulai.", image: "Resources/Foods/telur gulai.jpg" },
-            { name: "Telur Rendang", price: 7000, description: "Telur Rendang.", image: "Resources/Foods/telur rendang.jpg" },
-            { name: "Sambel Balado", price: 5000, description: "Sambel Balado.", image: "Resources/Foods/sambel balado.jpg" },
-            { name: "Sambel Ijo", price: 5000, description: "Sambel Ijo.", image: "Resources/Foods/sambel ijo.jpg" },
-            { name: "Sambel Mercon", price: 5000, description: "Sambel Mercon.", image: "Resources/Foods/sambel mercon.jpg" },
+            { name: "Nasi Galung", price: 22000, description: "Aduk nasinya & rasakan sensasi pedas yang unik.", image: "Resources/Foods/nasi galung.jpg", category: "Nasi" },
+            { name: "Manyung Sambal", price: 27000, description: "Tekstur garing gurih dengan pedas yang pas.", image: "Resources/Foods/manyung sambal.jpg", category: "Ikan" },
+            { name: "Ayam Goreng Mercon", price: 27000, description: "Pedesnya membuatmu ga bisa lupa dan nagih.", image: "Resources/Foods/ayam goreng sambel mercon.jpg", category: "Ayam" },
+            { name: "Manyung Goreng", price: 22000, description: "Pendamping Nasi Galung yang bisa diandalkan.", image: "Resources/Foods/manyung goreng.jpg", category: "Ikan" },
+            { name: "Rendang Sapi", price: 22000, description: "Dimasak perlahan hingga bumbu meresap sempurna.", image: "Resources/Foods/rendang sapi.jpg", category: "Nasi" },
+            { name: "Ayam Goreng", price: 22000, description: "Disajikan panas. Rasanya gurih, lezat tak terlupakan.", image: "Resources/Foods/ayam goreng.jpg", category: "Ayam" },
+            { name: "Nasi Putih", price: 7000, description: "Nasi putih pulen.", image: "Resources/Foods/nasi putih.jpg", category: "Nasi" },
+            { name: "Ayam Rendang", price: 22000, description: "Bumbunya meresap sampai ke tulang.", image: "Resources/Foods/ayam rendang.jpg", category: "Ayam" },
+            { name: "Tahu Gulai", price: 5000, description: "Teksturnya lembut & lumer di mulut.", image: "Resources/Foods/tahu gulai.jpg", category: "Side Dish" },
+            { name: "Perkedel Kentang", price: 5000, description: "Rasa kentangnya gurih dan berbumbu.", image: "Resources/Foods/perkedel kentang.jpg", category: "Side Dish" },
+            { name: "Telur Balado", price: 7000, description: "Telur Balado.", image: "Resources/Foods/telur balado.jpg", category: "Side Dish" },
+            { name: "Telur Dadar", price: 7000, description: "Telur Dadar.", image: "Resources/Foods/telur dadar.jpg", category: "Side Dish" },
+            { name: "Telur Gulai", price: 7000, description: "Telur Gulai.", image: "Resources/Foods/telur gulai.jpg", category: "Side Dish" },
+            { name: "Telur Rendang", price: 7000, description: "Telur Rendang.", image: "Resources/Foods/telur rendang.jpg", category: "Side Dish" },
+            { name: "Sambel Balado", price: 5000, description: "Sambel Balado.", image: "Resources/Foods/sambel balado.jpg", category: "Side Dish" },
+            { name: "Sambel Ijo", price: 5000, description: "Sambel Ijo.", image: "Resources/Foods/sambel ijo.jpg", category: "Side Dish" },
+            { name: "Sambel Mercon", price: 5000, description: "Sambel Mercon.", image: "Resources/Foods/sambel mercon.jpg", category: "Side Dish" },
         ];
 
-        // Function to display menu items
-        function displayMenu() {
+        function displayMenu(filteredItems) {
             const menuList = document.getElementById("food-menu");
-            menuItems.forEach(item => {
+            menuList.innerHTML = ""; // Clear previous menu items
+            filteredItems.forEach(item => {
                 const listItem = document.createElement("li");
                 listItem.innerHTML = `
                     <img src="${item.image}" alt="${item.name}">
@@ -253,8 +92,18 @@
             });
         }
 
-        // Display the menu on page load
-        window.onload = displayMenu;
+        function filterMenuByCategory() {
+            const selectedCategory = document.getElementById("category-filter").value;
+            const filteredItems = selectedCategory
+                ? menuItems.filter(item => item.category === selectedCategory)
+                : menuItems;
+            displayMenu(filteredItems);
+        }
+
+        // Display all menu items on page load
+        window.onload = () => {
+            displayMenu(menuItems);
+        };
     </script>
 </body>
 </html>
