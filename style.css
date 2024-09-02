@@ -5,6 +5,7 @@ body {
     padding: 0;
     color: #333;
 }
+
 .navbar {
     background-color: #333;
     color: white;
@@ -14,32 +15,40 @@ body {
     align-items: center;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
+
 .navbar img {
     height: 50px;
 }
+
 .navbar .contact {
     font-size: 14px;
     text-align: right;
 }
+
 .contact {
     display: flex;
     gap: 0.5rem;
 }
+
 .header {
-    background-color: #FF0202;
+    background: url('/path/to/your/image.png') no-repeat center center;
+    background-size: cover;
     color: white;
     padding: 60px 20px;
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+
 .header h1 {
     font-size: 2.5em;
     margin: 0;
 }
+
 .header p {
     margin: 10px 0 0;
     font-size: 1.2em;
 }
+
 .menu {
     max-width: 900px;
     margin: 40px auto;
@@ -48,21 +57,25 @@ body {
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
+
 .menu h2 {
     text-align: center;
     color: #FF0202;
     font-size: 2em;
 }
+
 .menu ul {
     list-style: none;
     padding: 0;
     margin: 0;
 }
+
 .menu ul li {
     display: flex;
     padding: 20px 0;
     border-bottom: 1px solid #eee;
 }
+
 .menu ul li img {
     height: 100px;
     width: 100px;
@@ -70,28 +83,34 @@ body {
     object-fit: cover;
     margin-right: 20px;
 }
-.items-details{
+
+.items-details {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
 }
+
 .menu ul li {
     flex-grow: 1;
 }
+
 .menu .item-name {
     font-weight: bold;
     font-size: 1.5em;
     margin: 0;
 }
+
 .menu .item-price {
     color: #FF0202;
     font-size: 1.2em;
     margin: 5px 0;
 }
+
 .menu .item-description {
     margin: 10px 0 0;
     color: #666;
 }
+
 .footer {
     background-color: #333;
     color: white;
@@ -101,6 +120,7 @@ body {
     bottom: 0;
     width: 100%;
 }
+
 .whatsapp-button {
     position: fixed;
     bottom: 2.5rem;
@@ -115,6 +135,7 @@ body {
     color: white;
     text-decoration: none;
 }
+
 .whatsapp-button i {
     margin-right: 10px;
     color: #25D366;
@@ -125,12 +146,14 @@ body {
     .navbar .contact {
         font-size: 12px;
     }
+
     .whatsapp-button {
         bottom: 1.5rem;
         right: 1.5rem;
         padding: 10px 20px;
         font-size: 14px;
     }
+
     .whatsapp-button i {
         font-size: 14px;
     }
@@ -140,27 +163,38 @@ body {
     .navbar .contact {
         font-size: 10px;
     }
+
     .whatsapp-button {
         bottom: 1rem;
         right: 1rem;
         padding: 6px 12px;
         font-size: 12px;
     }
+
     .whatsapp-button i {
         font-size: 12px;
     }
 }
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 2rem 0;
+    text-align: center;
+    font-size: 1rem;
+}
+
 .social-media-links {
-margin-top: 10px;
+    margin-top: 10px;
 }
 
 .social-media-links a {
-color: white; /* Accent color */
-margin: 0 10px;
-text-decoration: none;
-font-size: 24px;
+    color: white; /* Accent color */
+    margin: 0 10px;
+    text-decoration: none;
+    font-size: 24px;
 }
 
 .social-media-links a:hover {
-color: #d00; /* Darker shade for hover effect */
+    color: #d00; /* Darker shade for hover effect */
 }
