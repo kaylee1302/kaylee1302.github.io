@@ -84,13 +84,25 @@
         .history-section p {
             margin: 20px 0;
         }
-
+        /* Include the updated CSS styles here */
         footer {
     background-color: #333;
     color: #fff;
-    padding: 2rem 0;
+    padding: 20px 0;
     text-align: center;
     font-size: 1rem;
+    position: relative;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-content p {
+    margin: 0;
+    font-size: 0.9rem;
 }
 
 .social-media-links {
@@ -105,7 +117,7 @@
 }
 
 .social-media-links a:hover {
-    color: #d00; /* Darker shade for hover effect */
+    color: #FF0202; /* Accent color for hover */
 }
 
     </style>
@@ -134,17 +146,18 @@
         <p>Today, we continue to honor our heritage, offering a taste of the past in every bite. Our restaurant is not just a place to eat but a place to experience the rich cultural history of Indonesia. We invite you to join us, to sit at our table, and to be a part of the Nasi Galung family.</p>
     </div>
 
-    <div class="footer">
-        <p>&copy; 2024 Nasi Galung. All rights reserved.</p>
-        <div class="social-media-links">
-            <a href="https://facebook.com/nasigalung" target="_blank" aria-label="Facebook">
-                <i class="fa fa-facebook"></i>
-            </a>
-            <a href="https://www.instagram.com/nasigalung" target="_blank" aria-label="Instagram">
-                <i class="fa fa-instagram"></i>
-            </a>    
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Nasi Galung. All rights reserved.</p>
+            <div class="social-media-links">
+                <a href="https://facebook.com/nasigalung" target="_blank" aria-label="Facebook">
+                    <i class="fa fa-facebook"></i>
+                </a>
+                <a href="https://www.instagram.com/nasigalung" target="_blank" aria-label="Instagram">
+                    <i class="fa fa-instagram"></i>
+                </a>
+            </div>
         </div>
-    </div>
-  
+    </footer>
 </body>
 </html>
