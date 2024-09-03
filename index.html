@@ -26,9 +26,9 @@
         <select id="category-filter" onchange="filterMenuByCategory()">
             <option value="">All</option>
             <option value="Nasi">Nasi</option>
-            <option value="Ikan">Ikan</option>
-            <option value="Ayam">Ayam</option>
-            <option value="Side Dish">Side Dish</option>
+            <option value="Ikan">Lauk Pauk</option>
+            <option value="Ayam">Side Dish</option>
+            <option value="Side Dish">Extra</option>
         </select>
         <ul id="food-menu">
             <!-- Menu items will be inserted here -->
@@ -55,22 +55,22 @@
     <script>
         const menuItems = [
             { name: "Nasi Galung", price: 22000, description: "Aduk nasinya & rasakan sensasi pedas yang unik.", image: "Resources/Foods/nasi galung.jpg", category: "Nasi" },
-            { name: "Manyung Sambal", price: 27000, description: "Tekstur garing gurih dengan pedas yang pas.", image: "Resources/Foods/manyung sambal.jpg", category: "Ikan" },
-            { name: "Ayam Goreng Mercon", price: 27000, description: "Pedesnya membuatmu ga bisa lupa dan nagih.", image: "Resources/Foods/ayam goreng sambel mercon.jpg", category: "Ayam" },
-            { name: "Manyung Goreng", price: 22000, description: "Pendamping Nasi Galung yang bisa diandalkan.", image: "Resources/Foods/manyung goreng.jpg", category: "Ikan" },
-            { name: "Rendang Sapi", price: 22000, description: "Dimasak perlahan hingga bumbu meresap sempurna.", image: "Resources/Foods/rendang sapi.jpg", category: "Nasi" },
-            { name: "Ayam Goreng", price: 22000, description: "Disajikan panas. Rasanya gurih, lezat tak terlupakan.", image: "Resources/Foods/ayam goreng.jpg", category: "Ayam" },
+            { name: "Manyung Sambal", price: 27000, description: "Tekstur garing gurih dengan pedas yang pas.", image: "Resources/Foods/manyung sambal.jpg", category: "Lauk Pauk" },
+            { name: "Ayam Goreng Mercon", price: 27000, description: "Pedesnya membuatmu ga bisa lupa dan nagih.", image: "Resources/Foods/ayam goreng sambel mercon.jpg", category: "Lauk Pauk" },
+            { name: "Manyung Goreng", price: 22000, description: "Pendamping Nasi Galung yang bisa diandalkan.", image: "Resources/Foods/manyung goreng.jpg", category: "Lauk Pauk" },
+            { name: "Rendang Sapi", price: 22000, description: "Dimasak perlahan hingga bumbu meresap sempurna.", image: "Resources/Foods/rendang sapi.jpg", category: "Lauk Pauk" },
+            { name: "Ayam Goreng", price: 22000, description: "Disajikan panas. Rasanya gurih, lezat tak terlupakan.", image: "Resources/Foods/ayam goreng.jpg", category: "Lauk Pauk" },
             { name: "Nasi Putih", price: 7000, description: "Nasi putih pulen.", image: "Resources/Foods/nasi putih.jpg", category: "Nasi" },
-            { name: "Ayam Rendang", price: 22000, description: "Bumbunya meresap sampai ke tulang.", image: "Resources/Foods/ayam rendang.jpg", category: "Ayam" },
+            { name: "Ayam Rendang", price: 22000, description: "Bumbunya meresap sampai ke tulang.", image: "Resources/Foods/ayam rendang.jpg", category: "Lauk Pauk" },
             { name: "Tahu Gulai", price: 5000, description: "Teksturnya lembut & lumer di mulut.", image: "Resources/Foods/tahu gulai.jpg", category: "Side Dish" },
             { name: "Perkedel Kentang", price: 5000, description: "Rasa kentangnya gurih dan berbumbu.", image: "Resources/Foods/perkedel kentang.jpg", category: "Side Dish" },
             { name: "Telur Balado", price: 7000, description: "Telur Balado.", image: "Resources/Foods/telur balado.jpg", category: "Side Dish" },
             { name: "Telur Dadar", price: 7000, description: "Telur Dadar.", image: "Resources/Foods/telur dadar.jpg", category: "Side Dish" },
             { name: "Telur Gulai", price: 7000, description: "Telur Gulai.", image: "Resources/Foods/telur gulai.jpg", category: "Side Dish" },
             { name: "Telur Rendang", price: 7000, description: "Telur Rendang.", image: "Resources/Foods/telur rendang.jpg", category: "Side Dish" },
-            { name: "Sambel Balado", price: 5000, description: "Sambel Balado.", image: "Resources/Foods/sambel balado.jpg", category: "Side Dish" },
-            { name: "Sambel Ijo", price: 5000, description: "Sambel Ijo.", image: "Resources/Foods/sambel ijo.jpg", category: "Side Dish" },
-            { name: "Sambel Mercon", price: 5000, description: "Sambel Mercon.", image: "Resources/Foods/sambel mercon.jpg", category: "Side Dish" },
+            { name: "Sambel Balado", price: 5000, description: "Sambel Balado.", image: "Resources/Foods/sambel balado.jpg", category: "Extra" },
+            { name: "Sambel Ijo", price: 5000, description: "Sambel Ijo.", image: "Resources/Foods/sambel ijo.jpg", category: "Extra" },
+            { name: "Sambel Mercon", price: 5000, description: "Sambel Mercon.", image: "Resources/Foods/sambel mercon.jpg", category: "Extra" },
         ];
 
         function displayMenu(filteredItems) {
