@@ -199,3 +199,42 @@ footer {
 .social-media-links a:hover {
     color: #d00; /* Darker shade for hover effect */
 }
+
+.navbar {
+    display: flex;
+    align-items: center;
+    background-color: #333;
+    color: white;
+    padding: 15px 20px;
+}
+
+.navbar img {
+    height: 50px;
+    width: auto;
+    margin-right: 20px;
+}
+
+.navbar .menu-button {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    margin: 0 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    border: 2px solid transparent;
+    border-radius: 5px;
+}
+
+.navbar .menu-button:hover {
+    background-color: #555;
+    border-color: #FF0202; /* Accent color on hover */
+}
+
+.navbar .contact {
+    margin-left: auto; /* Pushes the contact info to the far right */
+    font-size: 0.9em;
+}
+
+.navbar .contact p {
+    margin: 0;
+}

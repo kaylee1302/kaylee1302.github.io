@@ -5,16 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome - Nasi Galung</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <style>
-        body {
-            font-family: 'Georgia', serif;
-            margin: 0;
-            padding: 0;
-            color: #333;
-        }
-
-        .navbar {
+         .navbar {
             display: flex;
             align-items: center;
             background-color: #333;
@@ -52,53 +44,24 @@
         .navbar .contact p {
             margin: 0;
         }
-
+        
         .header {
-            background: url('Resources/vintage-bg.jpg') no-repeat center center;
+            background: url('Resources/image.png') no-repeat center center;
             background-size: cover;
             color: white;
-            padding: 80px 20px;
+            padding: 60px 20px;
             text-align: center;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            position: relative;
-        }
-
-        .header::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.4);
-            z-index: 0;
-        }
-
-        .header h1, .header p {
-            position: relative;
-            z-index: 1;
-        }
-
-        .header h1 {
-            font-size: 3em;
-            margin-bottom: 10px;
-            animation: fadeIn 2s ease-in-out;
-        }
-
-        .header p {
-            font-size: 1.5em;
-            margin: 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
         .history-section {
             max-width: 900px;
-            margin: 60px auto;
-            padding: 30px;
+            margin: 40px auto;
+            padding: 20px;
             background-color: #fff9e6;
-            border-radius: 15px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            position: relative;
-            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            font-family: 'Georgia', serif;
             color: #5a4a42;
             line-height: 1.8;
         }
@@ -106,20 +69,15 @@
         .history-section h2 {
             text-align: center;
             color: #8b5e3c;
-            font-size: 2.5em;
-            margin-bottom: 30px;
+            font-size: 2em;
+            margin-bottom: 20px;
         }
 
         .history-section img {
             max-width: 100%;
             height: auto;
-            border-radius: 15px;
+            border-radius: 10px;
             margin: 20px 0;
-            transition: transform 0.3s ease;
-        }
-
-        .history-section img:hover {
-            transform: scale(1.05);
         }
 
         .history-section p {
@@ -130,37 +88,10 @@
             background-color: #333;
             color: white;
             text-align: center;
-            padding: 30px;
+            padding: 20px;
             position: relative;
             bottom: 0;
             width: 100%;
-        }
-
-        .footer .social-media-links {
-            margin: 20px 0;
-        }
-
-        .footer .social-media-links a {
-            color: white;
-            text-decoration: none;
-            margin: 0 10px;
-            font-size: 1.5em;
-            transition: color 0.3s ease;
-        }
-
-        .footer .social-media-links a:hover {
-            color: #f7eef3;
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(-20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
         }
     </style>
 </head>
@@ -191,10 +122,10 @@
     <div class="footer">
         <div class="social-media-links">
             <a href="https://facebook.com/nasigalung" target="_blank" aria-label="Facebook">
-                <i class="fab fa-facebook-f"></i>
+                <i class="fa fa-facebook"></i>
             </a>
             <a href="https://www.instagram.com/nasigalung" target="_blank" aria-label="Instagram">
-                <i class="fab fa-instagram"></i>
+                <i class="fa fa-instagram"></i>
             </a>    
         </div>
     </div>
