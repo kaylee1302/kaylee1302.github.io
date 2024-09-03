@@ -31,13 +31,18 @@ body {
     gap: 0.5rem;
 }
 
+
 .header {
-    background: url('Resources/WhatsApp Image 2024-09-03 at 12.11.48_519bfafc.jpg') no-repeat center center;
+    background: url('Resources/galung-nasi.png') no-repeat center center;
     background-size: contain; /* Ensure the full image is displayed */
     color: #000000;
-    padding: 120px 20px; /* Increased padding for a larger banner */
+    padding: 120px 20px; /* Match padding to previous code */
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.head-content{
+    background-color: white;
 }
 
 .header h1 {
