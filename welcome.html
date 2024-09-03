@@ -16,181 +16,108 @@
         }
 
         .navbar {
+            display: flex;
+            align-items: center;
             background-color: #333;
             color: white;
-            padding: 15px 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 10px 20px; /* Reduced padding */
         }
 
         .navbar img {
-            height: 50px;
+            height: 40px; /* Reduced height */
+            width: auto;
+            margin-right: 15px; /* Adjusted spacing */
+        }
+
+        .navbar .menu-button {
+            color: white;
+            text-decoration: none;
+            padding: 8px 12px; /* Reduced padding */
+            margin: 0 5px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+            border: 2px solid transparent;
+            border-radius: 5px;
+        }
+
+        .navbar .menu-button:hover {
+            background-color: #555;
+            border-color: #FF0202; /* Accent color on hover */
         }
 
         .navbar .contact {
-            font-size: 14px;
-            text-align: right;
+            margin-left: auto;
+            font-size: 0.8em; /* Slightly smaller font size */
+            display: flex;
+            align-items: center;
+            gap: 15px; /* Adjusted spacing */
         }
 
-        .contact {
-            display: flex;
-            gap: 0.5rem;
+        .navbar .contact p {
+            margin: 0;
+            display: inline-block;
         }
 
         .header {
             background: url('Resources/WhatsApp Image 2024-09-03 at 12.11.48_519bfafc.jpg') no-repeat center center;
-            background-size: cover; /* Adjusts the image size to cover the container */
+            background-size: cover;
             color: #000000;
-            padding: 40px 20px; /* Further reduced padding */
+            padding: 30px 20px; /* Reduced padding */
             text-align: center;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            height: 300px; /* Adjusted height */
         }
 
-        .header h1 {
-            font-size: 2em;
-            margin: 0;
-        }
-
-        .header p {
-            margin: 10px 0 0;
-            font-size: 1em;
-        }
-
-        .menu {
+        .history-section {
             max-width: 900px;
             margin: 40px auto;
             padding: 20px;
-            background-color: white;
+            background: url('Resources/550f46de1ee02e10cf7177b8bdf59686.jpg') no-repeat center center;
+            background-size: cover;
             border-radius: 10px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-
-        .menu h2 {
-            text-align: center;
-            color: #FF0202;
-            font-size: 2em;
-        }
-
-        .menu ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        .menu ul li {
-            display: flex;
-            padding: 20px 0;
-            border-bottom: 1px solid #eee;
-        }
-
-        .menu ul li img {
-            height: 100px;
-            width: 100px;
-            border-radius: 8px;
-            object-fit: cover;
-            margin-right: 20px;
-        }
-
-        .items-details {
-            display: flex;
-            flex-direction: column;
-            gap: 0.5rem;
-        }
-
-        .menu ul li {
-            flex-grow: 1;
-        }
-
-        .menu .item-name {
-            font-weight: bold;
-            font-size: 1.5em;
-            margin: 0;
-        }
-
-        .menu .item-price {
-            color: #FF0202;
-            font-size: 1.2em;
-            margin: 5px 0;
-        }
-
-        .menu .item-description {
-            margin: 10px 0 0;
-            color: #666;
-        }
-
-        .footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 20px;
+            color: #000000;
+            line-height: 1.8;
             position: relative;
-            bottom: 0;
-            width: 100%;
+            overflow: hidden;
         }
 
-        .whatsapp-button {
-            position: fixed;
-            bottom: 2.5rem;
-            right: 2.5rem;
-            display: flex;
-            align-items: center;
-            background-color: #16a34a;
-            border-radius: 50px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-            padding: 15px 25px;
-            font-size: 16px;
-            color: white;
-            text-decoration: none;
+        .history-section h2 {
+            text-align: center;
+            color: #8b5e3c;
+            font-size: 2em;
+            margin-bottom: 20px;
         }
 
-        .whatsapp-button i {
-            margin-right: 10px;
-            color: #25D366;
+        .history-section img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin: 20px 0;
         }
 
-        /* Responsive styles */
-        @media (max-width: 768px) {
-            .navbar .contact {
-                font-size: 12px;
-            }
-
-            .whatsapp-button {
-                bottom: 1.5rem;
-                right: 1.5rem;
-                padding: 10px 20px;
-                font-size: 14px;
-            }
-
-            .whatsapp-button i {
-                font-size: 14px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .navbar .contact {
-                font-size: 10px;
-            }
-
-            .whatsapp-button {
-                bottom: 1rem;
-                right: 1rem;
-                padding: 6px 12px;
-                font-size: 12px;
-            }
-
-            .whatsapp-button i {
-                font-size: 12px;
-            }
+        .history-section p {
+            margin: 20px 0;
         }
 
         footer {
             background-color: #333;
             color: #fff;
-            padding: 2rem 0;
+            padding: 20px 0;
             text-align: center;
             font-size: 1rem;
+            position: relative;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .footer-content p {
+            margin: 0;
+            font-size: 0.9rem;
         }
 
         .social-media-links {
@@ -205,7 +132,7 @@
         }
 
         .social-media-links a:hover {
-            color: #d00; /* Darker shade for hover effect */
+            color: #FF0202; /* Accent color for hover */
         }
     </style>
 </head>
@@ -221,24 +148,14 @@
     </div>
 
     <div class="header">
-        <h1>Nasi Galung</h1>
-        <p>Indonesian Cuisine</p>
     </div>
 
-    <div class="menu">
-        <h2>Our Menu</h2>
-        <ul>
-            <!-- Example menu items -->
-            <li>
-                <img src="Resources/sample-dish.jpg" alt="Sample Dish">
-                <div class="items-details">
-                    <div class="item-name">Dish Name</div>
-                    <div class="item-price">IDR 50,000</div>
-                    <div class="item-description">A delicious description of the dish.</div>
-                </div>
-            </li>
-            <!-- Add more items as needed -->
-        </ul>
+    <div class="history-section">
+        <h2>About Us</h2>
+        <img src="Resources/WhatsApp Image 2024-09-03 at 12.09.56_603d47ca.jpg" alt="Nasi Galung History">
+        <p>Usaha Nasi Galung pertama kali dimulai sekitar tahun 1970-an oleh Kakek Buyut kami yang bermarga Hutagalung di kota Pematangsiantar, Sumatera Utara sekitar 120km dari kota Medan. Namun agar lebih mudah disebut dan diingat, maka digunakan brand “Nasi Galung”. Sebagaimana usaha lainnya, Nasi Galung juga sempat mengalami masa-masa sulit sehingga sempat menghentikan operasionalnya selama beberapa tahun.</p>
+        <p>Pada tahun 1989, orangtua kami kembali memulai usaha Nasi Galung, masih di kota yang sama dan saat itu Nasi Galung kembali menjadi sangat populer. Setiap hari selalu diramaikan oleh pengunjung yang ingin menikmati sedapnya Nasi Galung. Selain tamu dari kota sendiri, juga banyak tamu-tamu yang datang dari luar kota untuk menikmati kelezatan Nasi Galung kami.</p>
+        <p>Pada tahun 2001, usaha Nasi Galung kami resmi pindah ke kota Jakarta, yang bertempat di Taman Pluit Kencana. Kami juga sempat mengalami kesulitan karena harus membangun kembali usaha ini dari nol. Tapi berkat kegigihan dan kerja keras orangtua kami, usaha kami semakin berkembang maju dan kembali ramai oleh pengunjung. Saat ini Nasi Galung sudah memiliki 3 outlet yaitu cabang Taman Palem Lestari, Dutamas & Gading Serpong. Di tahun 2025, kami akan segera membuka cabang terbaru kami di Kelapa Gading, Jakarta Utara.</p>
     </div>
 
     <footer>
