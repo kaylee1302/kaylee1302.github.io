@@ -1,6 +1,7 @@
 body {
     font-family: 'Helvetica Neue', Arial, sans-serif;
-    background-color: #f2f2f2;
+    background: url('Resources/6f451061e851a6da714c0c43aa1d5810.jpg') no-repeat center center fixed;
+    background-size: cover;
     margin: 0;
     padding: 0;
     color: #333;
