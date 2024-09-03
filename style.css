@@ -34,7 +34,7 @@ body {
 .header {
     background: url('Resources/WhatsApp Image 2024-09-03 at 12.11.48_519bfafc.jpg') no-repeat center center;
     background-size: cover;
-    color: white;
+    color: #000000;
     padding: 60px 20px;
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
