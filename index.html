@@ -21,17 +21,18 @@
     color: white;
     padding: 15px 20px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    justify-content: space-between; /* Align items to space between */
+    justify-content: flex-start; /* Align items to the left */
 }
 
 .navbar img {
     height: 50px;
     width: auto;
+    margin-right: 20px; /* Space between logo and buttons */
 }
 
 .navbar .buttons-container {
     display: flex;
-    gap: 10px; /* Adds space between the buttons */
+    gap: 10px; /* Space between buttons */
 }
 
 .navbar .menu-button {
@@ -52,7 +53,8 @@
 .navbar .contact {
     display: flex;
     align-items: center;
-    gap: 20px; /* Adds space between phone and email */
+    gap: 20px; /* Space between phone and email */
+    margin-left: auto; /* Push contact info to the right */
 }
 
 .navbar .contact p {
@@ -250,8 +252,10 @@
             <a href="welcome.html" class="menu-button">About</a>
             <a href="index.html" class="menu-button">Menu</a>
         </div>
-    </div>
-    
+        <div class="contact">
+            <!-- Contact details here -->
+        </div>
+    </div>    
 
     <div class="header">
     </div>
