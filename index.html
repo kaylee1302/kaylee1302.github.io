@@ -59,12 +59,18 @@
         }
 
         .header {
-            background: url('Resources/WhatsApp Image 2024-09-05 at 08.00.06_c35bf541.jpg') no-repeat center center;
-            background-size: contain; /* Ensure the image is fully visible */
-            background-attachment: fixed; /* Optional parallax effect */
-            height: 300px; /* Adjust height as needed */
-            width: 100%;
-        }
+    background: url('Resources/WhatsApp Image 2024-09-05 at 08.00.06_c35bf541.jpg') no-repeat center center;
+    background-size: cover; /* Ensure the image covers the entire banner */
+    height: 300px; /* Adjust this height as needed */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
 
         .menu {
             max-width: 900px;
