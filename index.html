@@ -61,7 +61,7 @@
         .header {
     background: url('Resources/WhatsApp Image 2024-09-05 at 08.00.06_c35bf541.jpg') no-repeat center center;
     background-size: cover;
-    height: calc(50vh + 20px);
+    height: calc(50vh + 20px); /* Default height for larger screens */
     width: 100%;
     display: flex;
     justify-content: center;
@@ -89,8 +89,8 @@
 /* For mobile phones */
 @media (max-width: 480px) {
     .header {
-        height: calc(30vh - 10px); /* Reduce height for mobile devices */
-        font-size: 0.9rem; /* Adjust font size if needed */
+        height: calc(20vh + 10px); /* Reduce height further for mobile devices */
+        font-size: 0.8rem; /* Adjust font size if needed */
     }
 }
 
