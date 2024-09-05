@@ -3,38 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <title>Kontak Nasi Galung</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
-<body>
-    <div class="navbar">
-        <img src="Resources/logo.png" alt="Nasi Galung Logo">
-        <div class="nav-buttons">
-            <a href="welcome.html" class="menu-button">About</a>
-            <a href="index.html" class="menu-button">Menu</a>
-            <a href="contact.html" class="menu-button">Contact</a>
+<body class="font-sans text-gray-800 bg-cover bg-center bg-fixed" style="background-image: url('Resources/51dea358cef428a0056d2093b54de8ee.jpg');">
+      <!-- Navbar -->
+      <div class="flex items-center bg-gray-800 text-white p-4 shadow-md">
+        <img src="Resources/logo.png" alt="Nasi Galung Logo" class="h-12 w-auto mr-4">
+        <div class="flex gap-4">
+            <a href="welcome.html" class="text-white font-bold px-3 py-2 hover:bg-gray-700 rounded-md">About</a>
+            <a href="index.html" class="text-white font-bold px-3 py-2 hover:bg-gray-700 rounded-md">Menu</a>
+            <a href="contact.html" class="text-white font-bold px-3 py-2 hover:bg-gray-700 rounded-md">Contact</a>
+        </div>
+        <div class="flex items-center ml-auto gap-4">
+            <!-- Contact details will go here -->
         </div>
     </div>
 
-    <div class="header">
-    </div>
+<!-- Header Section -->
+<div class="bg-cover bg-center h-[calc(50vh+20px)] w-full flex items-center justify-center text-white text-center px-4" style="background-image: url('Resources/WhatsApp Image 2024-09-05 at 08.00.06_c35bf541.jpg');">
+</div>
 
-    <div class="contact-section">
-        <h2>Contact Us</h2>
-        <p><strong>Phone:</strong> +62 8122882701</p>
-        <p><strong>Email:</strong> rm.galung@gmail.com</p>
-        <p><strong>Facebook:</strong> Nasigalung</p>
-        <p><strong>Instagram:</strong> nasigalung</p>
-    </div>
+    <!-- Main Content -->
+    <main class="py-10 px-4">
+        <div class="text-center">
+            <h2 class="text-3xl font-bold text-gray-800 mb-4">Contact Us</h2>
+            <p class="text-lg"><strong>Phone:</strong> +62 8122882701</p>
+            <p class="text-lg"><strong>Email:</strong> rm.galung@gmail.com</p>
+            <p class="text-lg"><strong>Facebook:</strong> Nasigalung</p>
+            <p class="text-lg"><strong>Instagram:</strong> nasigalung</p>
+        </div>
+    </main>
 
-    <footer>
-        <div class="footer-content">
-            <p>&copy; 2024 Nasi Galung. All rights reserved.</p>
-            <div class="social-media-links">
-                <a href="https://facebook.com/nasigalung" target="_blank" aria-label="Facebook">
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-6">
+        <div class="max-w-6xl mx-auto text-center">
+            <p class="text-sm mb-4">&copy; 2024 Nasi Galung. All rights reserved.</p>
+            <div class="flex justify-center space-x-4">
+                <a href="https://facebook.com/nasigalung" target="_blank" aria-label="Facebook" class="text-white hover:text-red-600 text-xl">
                     <i class="fab fa-facebook-f"></i>
                 </a>
-                <a href="https://www.instagram.com/nasigalung" target="_blank" aria-label="Instagram">
+                <a href="https://www.instagram.com/nasigalung" target="_blank" aria-label="Instagram" class="text-white hover:text-red-600 text-xl">
                     <i class="fab fa-instagram"></i>
                 </a>
             </div>

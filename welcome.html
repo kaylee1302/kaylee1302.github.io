@@ -3,43 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome - Nasi Galung</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Nasi Galung</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
-<body>
-    <div class="navbar">
-        <img src="Resources/logo.png" alt="Nasi Galung Logo">
-        <div class="nav-buttons">
-            <a href="welcome.html" class="menu-button">About</a>
-            <a href="index.html" class="menu-button">Menu</a>
-            <a href="contact.html" class="menu-button">Contact</a>
+<body class="bg-cover bg-center bg-fixed" style="background-image: url('Resources/550f46de1ee02e10cf7177b8bdf59686.jpg');">
+     <!-- Navbar -->
+     <div class="flex items-center bg-gray-800 text-white p-4 shadow-md">
+        <img src="Resources/logo.png" alt="Nasi Galung Logo" class="h-12 w-auto mr-4">
+        <div class="flex gap-4">
+            <a href="welcome.html" class="text-white font-bold px-3 py-2 hover:bg-gray-700 rounded-md">About</a>
+            <a href="index.html" class="text-white font-bold px-3 py-2 hover:bg-gray-700 rounded-md">Menu</a>
+            <a href="contact.html" class="text-white font-bold px-3 py-2 hover:bg-gray-700 rounded-md">Contact</a>
         </div>
-        <div class="contact">
-            <!-- Optional: Add contact information here -->
+        <div class="flex items-center ml-auto gap-4">
+            <!-- Contact details will go here -->
         </div>
     </div>
 
-    <div class="header">
-        <!-- Optional: Add header content here -->
-    </div>
+    <!-- Main Content -->
+    <main>
+        <!-- Header Section -->
+        <div class="bg-cover bg-center h-[calc(50vh+20px)] w-full flex items-center justify-center text-white text-center px-4" style="background-image: url('Resources/WhatsApp Image 2024-09-05 at 08.00.06_c35bf541.jpg');">
+        </div>
 
-    <div class="history-section">
-        <h2>About Us</h2>
-        <img src="Resources/WhatsApp Image 2024-09-03 at 12.09.56_603d47ca.jpg" alt="Nasi Galung History">
-        <p>Usaha Nasi Galung pertama kali dimulai sekitar tahun 1970-an oleh Kakek Buyut kami yang bermarga Hutagalung di kota Pematangsiantar, Sumatera Utara sekitar 120km dari kota Medan. Namun agar lebih mudah disebut dan diingat, maka digunakan brand “Nasi Galung”. Sebagaimana usaha lainnya, Nasi Galung juga sempat mengalami masa-masa sulit sehingga sempat menghentikan operasionalnya selama beberapa tahun.</p>
-        <p>Pada tahun 1989, orangtua kami kembali memulai usaha Nasi Galung, masih di kota yang sama dan saat itu Nasi Galung kembali menjadi sangat populer. Setiap hari selalu diramaikan oleh pengunjung yang ingin menikmati sedapnya Nasi Galung. Selain tamu dari kota sendiri, juga banyak tamu-tamu yang datang dari luar kota untuk menikmati kelezatan Nasi Galung kami.</p>
-        <p>Pada tahun 2001, usaha Nasi Galung kami resmi pindah ke kota Jakarta, yang bertempat di Taman Pluit Kencana. Kami juga sempat mengalami kesulitan karena harus membangun kembali usaha ini dari nol. Tapi berkat kegigihan dan kerja keras orangtua kami, usaha kami semakin berkembang maju dan kembali ramai oleh pengunjung. Saat ini Nasi Galung sudah memiliki 3 outlet yaitu cabang Taman Palem Lestari, Dutamas & Gading Serpong. Di tahun 2025, kami akan segera membuka cabang terbaru kami di Kelapa Gading, Jakarta Utara.</p>
-    </div>
+        <!-- History Section -->
+        <div class="max-w-3xl mx-auto my-10 px-4 py-6 text-black">
+            <h2 class="text-3xl font-bold text-brown-700 mb-6 text-center">About Us</h2>
+            <img src="Resources/WhatsApp Image 2024-09-03 at 12.09.56_603d47ca.jpg" alt="Nasi Galung History" class="w-full max-h-[500px] object-cover rounded-lg mb-6 mx-auto">
+            <p class="mb-4">Usaha Nasi Galung pertama kali dimulai sekitar tahun 1970-an oleh Kakek Buyut kami yang bermarga Hutagalung di kota Pematangsiantar, Sumatera Utara sekitar 120km dari kota Medan. Namun agar lebih mudah disebut dan diingat, maka digunakan brand “Nasi Galung”.</p>
+            <p class="mb-4">Pada tahun 1989, orangtua kami kembali memulai usaha Nasi Galung, masih di kota yang sama dan saat itu Nasi Galung kembali menjadi sangat populer. Setiap hari selalu diramaikan oleh pengunjung yang ingin menikmati sedapnya Nasi Galung. Selain tamu dari kota sendiri, juga banyak tamu-tamu yang datang dari luar kota untuk menikmati kelezatan Nasi Galung kami.
+            </p>
+            <p>Pada tahun 2001, usaha Nasi Galung kami resmi pindah ke kota Jakarta, yang bertempat di Taman Pluit Kencana. Kami juga sempat mengalami kesulitan karena harus membangun kembali usaha ini dari nol. Tapi berkat kegigihan dan kerja keras orangtua kami, usaha kami semakin berkembang maju dan kembali ramai oleh pengunjung. Saat ini Nasi Galung sudah memiliki 3 outlet yaitu cabang Taman Palem Lestari, Dutamas & Gading Serpong. Di tahun 2025, kami akan segera membuka cabang terbaru kami di Kelapa Gading, Jakarta Utara.</p>
+        </div>
+    </main>
 
-    <footer>
-        <div class="footer-content">
-            <p>&copy; 2024 Nasi Galung. All rights reserved.</p>
-            <div class="social-media-links">
-                <a href="https://facebook.com/nasigalung" target="_blank" aria-label="Facebook">
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-6">
+        <div class="max-w-6xl mx-auto text-center">
+            <p class="text-sm mb-4">&copy; 2024 Nasi Galung. All rights reserved.</p>
+            <div class="flex justify-center space-x-4">
+                <a href="https://facebook.com/nasigalung" target="_blank" aria-label="Facebook" class="text-white hover:text-red-600 text-xl">
                     <i class="fab fa-facebook-f"></i>
                 </a>
-                <a href="https://www.instagram.com/nasigalung" target="_blank" aria-label="Instagram">
+                <a href="https://www.instagram.com/nasigalung" target="_blank" aria-label="Instagram" class="text-white hover:text-red-600 text-xl">
                     <i class="fab fa-instagram"></i>
                 </a>
             </div>
