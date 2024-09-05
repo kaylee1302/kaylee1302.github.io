@@ -3,16 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menu Nasi Galung</title>
+    <title>Nasi Galung</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <style>
-        /* Remove default margins and paddings for main and body */
-        body, main {
-            margin: 0;
-            padding: 0;
-        }
-    </style>
 </head>
 <body class="font-sans text-gray-800 bg-cover bg-center bg-fixed" style="background-image: url('Resources/51dea358cef428a0056d2093b54de8ee.jpg');">
 
@@ -30,11 +23,10 @@
     </div>
 
     <!-- Header Section -->
-    <div class="bg-cover bg-center h-[calc(50vh+20px)] w-full flex items-center justify-center text-white text-center px-4" style="background-image: url('Resources/WhatsApp Image 2024-09-05 at 08.00.06_c35bf541.jpg');">
-    </div>
+    <div class="w-screen bg-no-repeat bg-center bg-contain" style="background-image: url('Resources/WhatsApp Image 2024-09-05 at 08.00.06_c35bf541.jpg'); height: 300px;"></div>
 
     <!-- Menu Section -->
-    <div class="max-w-3xl mx-auto p-6 bg-white rounded-lg shadow-lg">
+    <div class="max-w-3xl mx-auto my-10 p-6 bg-white rounded-lg shadow-lg">
         <h2 class="text-center text-red-600 text-3xl font-bold mb-6">Our Menu</h2>
         <select id="category-filter" class="block w-full p-3 mb-6 text-base border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500" onchange="filterMenuByCategory()">
             <option value="">All</option>
