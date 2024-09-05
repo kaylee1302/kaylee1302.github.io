@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome - Nasi Galung</title>
+    <title>Contact Us - Nasi Galung</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
@@ -96,37 +96,52 @@
             }
         }
 
-        .history-section {
+        .contact-section {
             max-width: 900px;
             margin: 40px auto;
             padding: 20px;
-            background: url('Resources/550f46de1ee02e10cf7177b8bdf59686.jpg') no-repeat center center;
-            background-size: cover;
+            background-color: white;
             border-radius: 10px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            color: #000000;
-            line-height: 1.8;
-            position: relative;
-            overflow: hidden;
         }
 
-        .history-section h2 {
+        .contact-section h2 {
             text-align: center;
-            color: #8b5e3c;
+            color: #FF0202;
             font-size: 2em;
             margin-bottom: 20px;
         }
 
-        .history-section img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 10px;
-            margin: 20px auto; /* Center the image horizontally */
-            display: block; /* Ensures that the image behaves like a block-level element */
+        .contact-section p {
+            margin: 10px 0;
         }
 
-        .history-section p {
-            margin: 20px 0;
+        .contact-section form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .contact-section form input, .contact-section form textarea {
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        .contact-section form button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #FF0202;
+            color: white;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .contact-section form button:hover {
+            background-color: #d00;
         }
 
         footer {
@@ -171,23 +186,27 @@
         <div class="nav-buttons">
             <a href="welcome.html" class="menu-button">About</a>
             <a href="index.html" class="menu-button">Menu</a>
-            <a href="contact.html" class="menu-button">Menu</a>
-        </div>
-        <div class="contact">
-            <!-- Optional: Add contact information here -->
+            <a href="contact.html" class="menu-button">Contact</a>
         </div>
     </div>
 
     <div class="header">
-        <!-- Optional: Add header content here -->
+        <h1>Contact Us</h1>
     </div>
 
-    <div class="history-section">
-        <h2>About Us</h2>
-        <img src="Resources/WhatsApp Image 2024-09-03 at 12.09.56_603d47ca.jpg" alt="Nasi Galung History">
-        <p>Usaha Nasi Galung pertama kali dimulai sekitar tahun 1970-an oleh Kakek Buyut kami yang bermarga Hutagalung di kota Pematangsiantar, Sumatera Utara sekitar 120km dari kota Medan. Namun agar lebih mudah disebut dan diingat, maka digunakan brand “Nasi Galung”. Sebagaimana usaha lainnya, Nasi Galung juga sempat mengalami masa-masa sulit sehingga sempat menghentikan operasionalnya selama beberapa tahun.</p>
-        <p>Pada tahun 1989, orangtua kami kembali memulai usaha Nasi Galung, masih di kota yang sama dan saat itu Nasi Galung kembali menjadi sangat populer. Setiap hari selalu diramaikan oleh pengunjung yang ingin menikmati sedapnya Nasi Galung. Selain tamu dari kota sendiri, juga banyak tamu-tamu yang datang dari luar kota untuk menikmati kelezatan Nasi Galung kami.</p>
-        <p>Pada tahun 2001, usaha Nasi Galung kami resmi pindah ke kota Jakarta, yang bertempat di Taman Pluit Kencana. Kami juga sempat mengalami kesulitan karena harus membangun kembali usaha ini dari nol. Tapi berkat kegigihan dan kerja keras orangtua kami, usaha kami semakin berkembang maju dan kembali ramai oleh pengunjung. Saat ini Nasi Galung sudah memiliki 3 outlet yaitu cabang Taman Palem Lestari, Dutamas & Gading Serpong. Di tahun 2025, kami akan segera membuka cabang terbaru kami di Kelapa Gading, Jakarta Utara.</p>
+    <div class="contact-section">
+        <h2>Get in Touch</h2>
+        <p>If you have any questions or would like to get in touch with us, please use the contact form below or reach out to us via the following methods:</p>
+        <p><strong>Address:</strong> Jl. Contoh No. 123, Jakarta, Indonesia</p>
+        <p><strong>Phone:</strong> +62 812 3456 7890</p>
+        <p><strong>Email:</strong> contact@nasigalung.com</p>
+        
+        <form action="submit_contact_form.php" method="post">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
     </div>
 
     <footer>
