@@ -22,6 +22,7 @@
             color: white;
             padding: 15px 20px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            justify-content: flex-start; /* Align items to the left */
         }
 
         .navbar img {
@@ -32,13 +33,13 @@
 
         .navbar .nav-buttons {
             display: flex;
+            gap: 10px; /* Add space between buttons */
         }
 
         .navbar .menu-button {
             color: white;
             text-decoration: none;
             padding: 10px 15px;
-            margin: 0 5px;
             font-weight: bold;
             transition: background-color 0.3s ease;
             border: 2px solid transparent;
@@ -48,18 +49,6 @@
         .navbar .menu-button:hover {
             background-color: #555;
             border-color: #FF0202; /* Accent color on hover */
-        }
-
-        .navbar .contact {
-            margin-left: auto;
-            font-size: 0.9em;
-            display: flex;
-            align-items: center;
-            gap: 20px;
-        }
-
-        .navbar .contact p {
-            margin: 0;
         }
 
         .header {
