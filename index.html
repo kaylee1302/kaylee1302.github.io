@@ -21,19 +21,23 @@
     color: white;
     padding: 15px 20px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    justify-content: space-between; /* Align items to space between */
 }
 
 .navbar img {
     height: 50px;
     width: auto;
-    margin-right: 20px;
+}
+
+.navbar .buttons-container {
+    display: flex;
+    gap: 10px; /* Adds space between the buttons */
 }
 
 .navbar .menu-button {
     color: white;
     text-decoration: none;
     padding: 10px 15px;
-    margin: 0 5px;
     font-weight: bold;
     transition: background-color 0.3s ease;
     border: 2px solid transparent;
@@ -45,14 +49,7 @@
     border-color: #FF0202; /* Accent color on hover */
 }
 
-.navbar .buttons-container {
-    display: flex;
-    gap: 10px; /* Adds space between the buttons */
-}
-
 .navbar .contact {
-    margin-left: auto;
-    font-size: 0.9em;
     display: flex;
     align-items: center;
     gap: 20px; /* Adds space between phone and email */
@@ -249,9 +246,12 @@
 <body>
     <div class="navbar">
         <img src="Resources/logo.png" alt="Nasi Galung Logo">
-        <a href="welcome.html" class="menu-button">About</a>
-        <a href="index.html" class="menu-button">Menu</a>
+        <div class="buttons-container">
+            <a href="welcome.html" class="menu-button">About</a>
+            <a href="index.html" class="menu-button">Menu</a>
+        </div>
     </div>
+    
 
     <div class="header">
     </div>
