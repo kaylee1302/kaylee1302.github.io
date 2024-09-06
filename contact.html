@@ -69,20 +69,22 @@
 
         @media (min-width: 768px) {
             .header {
-                height: 50vh;
+                height: 50vh; /* Adjust height for tablets and smaller desktops */
             }
         }
 
         @media (min-width: 1024px) {
             .header {
-                height: 60vh;
+                height: 60vh; /* Increase height for larger screens */
             }
         }
 
         @media (max-width: 480px) {
             .header {
-                height: 40vh;
-                font-size: 0.8rem;
+                background-size: contain; /* Ensure the entire banner is visible on small screens */
+                background-position: center top;
+                height: 40vh; /* Reduce height for very small screens */
+                font-size: 0.8rem; /* Adjust font size for small screens */
             }
         }
 
