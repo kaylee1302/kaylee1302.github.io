@@ -23,7 +23,8 @@
             color: white;
             padding: 15px 20px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            position: relative; /* Ensure position context for child elements */
+            position: relative;
+            z-index: 10; /* Ensure navbar is above other content */
         }
 
         .navbar img {
@@ -34,7 +35,7 @@
 
         .navbar .nav-buttons {
             display: flex;
-            gap: 10px; /* Space between buttons */
+            gap: 10px;
             align-items: center;
         }
 
@@ -51,15 +52,15 @@
 
         .navbar .menu-button:hover {
             background-color: #555;
-            border-color: #FF0202; /* Accent color on hover */
+            border-color: #FF0202;
         }
 
         .header {
             background: url('Resources/WhatsApp Image 2024-09-05 at 08.00.06_c35bf541.jpg') no-repeat center center;
-            background-size: cover; /* Ensure the image covers the header area */
+            background-size: cover;
             background-position: center;
-            height: 50vh; /* Default height */
             width: 100%;
+            height: 50vh;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -67,26 +68,25 @@
             text-align: center;
             padding: 20px;
             box-sizing: border-box;
-            margin: 0; /* Ensure no margin around the header */
+            margin: 0;
         }
 
-        /* Responsive Header */
         @media (min-width: 768px) {
             .header {
-                height: 40vh; /* Adjust height for tablets and laptops */
+                height: 40vh;
             }
         }
 
         @media (min-width: 1024px) {
             .header {
-                height: 45vh; /* Adjust height for larger screens */
+                height: 45vh;
             }
         }
 
         @media (max-width: 480px) {
             .header {
-                height: 30vh; /* Reduce height for mobile devices */
-                font-size: 0.8rem; /* Adjust font size if needed */
+                height: 30vh;
+                font-size: 0.8rem;
             }
         }
 
@@ -115,8 +115,8 @@
             max-width: 100%;
             height: auto;
             border-radius: 10px;
-            margin: 20px auto; /* Center the image horizontally */
-            display: block; /* Ensures that the image behaves like a block-level element */
+            margin: 20px auto;
+            display: block;
         }
 
         .history-section p {
@@ -155,10 +155,9 @@
         }
 
         .social-media-links a:hover {
-            color: #FF0202; /* Accent color for hover */
+            color: #FF0202;
         }
 
-        /* Responsive Styles */
         @media (max-width: 768px) {
             .navbar {
                 flex-direction: column;
@@ -176,7 +175,7 @@
             .history-section {
                 margin: 20px auto;
                 padding: 15px;
-                font-size: 0.9rem; /* Adjust font size for smaller screens */
+                font-size: 0.9rem;
             }
 
             .history-section h2 {
