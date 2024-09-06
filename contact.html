@@ -23,6 +23,8 @@
             padding: 15px 20px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
             justify-content: flex-start;
+            position: relative;
+            z-index: 1000;
         }
 
         .navbar img {
@@ -170,11 +172,15 @@
         @media (max-width: 768px) {
             .navbar {
                 flex-direction: column;
-                text-align: center;
+                text-align: left;
             }
 
             .navbar img {
                 margin-bottom: 10px;
+            }
+
+            .navbar .nav-buttons {
+                margin-left: 20px;
             }
         }
 

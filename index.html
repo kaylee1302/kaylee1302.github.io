@@ -18,15 +18,15 @@
             background-size: cover; /* Maintain cover behavior */
             background-position: center;
             background-repeat: no-repeat; /* Ensure no repeat */
-            height: 50vh; /* Default height */
+            height: 40vh; /* Default height for mobile */
             margin: 0; /* Remove any margin */
             padding: 0; /* Remove any padding */
             box-sizing: border-box; /* Ensure box-sizing includes padding and border */
         }
 
-        @media (max-width: 768px) {
+        @media (min-width: 768px) {
             .header {
-                height: 40vh; /* Adjust height for smaller screens */
+                height: 50vh; /* Adjust height for tablets and smaller desktops */
             }
         }
 
@@ -39,6 +39,10 @@
         /* Navbar Styles */
         .navbar {
             margin-bottom: 0; /* Remove bottom margin */
+        }
+
+        .navbar img {
+            height: 3rem; /* Adjust logo size */
         }
     </style>
 </head>
