@@ -46,11 +46,64 @@
 
         /* Navbar Styles */
         .navbar {
+            display: flex; /* Ensure flex display for proper alignment */
+            flex-direction: row; /* Arrange items in a row by default */
             margin-bottom: 0; /* Remove bottom margin */
+            align-items: center; /* Align items in the center vertically */
+            background-color: #333;
+            color: white;
+            padding: 15px 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
 
         .navbar img {
             height: 3rem; /* Adjust logo size */
+        }
+
+        .navbar .nav-buttons {
+            display: flex;
+            flex-direction: row; /* Ensure buttons are in a row by default */
+            gap: 10px; /* Adjust gap between buttons */
+        }
+
+        .navbar .menu-button {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+            border: 2px solid transparent;
+            border-radius: 5px;
+        }
+
+        .navbar .menu-button:hover {
+            background-color: #555;
+            border-color: #FF0202;
+        }
+
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column; /* Stack items vertically on smaller screens */
+                text-align: left;
+            }
+
+            .navbar .nav-buttons {
+                flex-direction: row; /* Ensure buttons are in a row on mobile screens */
+                gap: 4px; /* Adjust gap between buttons */
+                width: 100%; /* Full width for buttons container */
+            }
+
+            .navbar img {
+                margin-bottom: 10px; /* Adjust margin for logo on mobile */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .header {
+                background-size: contain; /* Ensure the entire banner is visible on small screens */
+                background-position: center top;
+                height: 30vh; /* Reduce height for very small screens */
+            }
         }
     </style>
 </head>
@@ -59,10 +112,10 @@
     <!-- Navbar -->
     <div class="flex flex-col md:flex-row items-center bg-gray-800 text-white p-4 shadow-md navbar">
         <img src="Resources/logo.png" alt="Nasi Galung Logo" class="h-12 w-auto mb-4 md:mb-0 md:mr-4">
-        <div class="flex flex-col md:flex-row gap-2 md:gap-4 w-full justify-center md:justify-start">
-            <a href="welcome.html" class="text-white font-bold px-3 py-2 hover:bg-gray-700 rounded-md text-center">About</a>
-            <a href="index.html" class="text-white font-bold px-3 py-2 hover:bg-gray-700 rounded-md text-center">Menu</a>
-            <a href="contact.html" class="text-white font-bold px-3 py-2 hover:bg-gray-700 rounded-md text-center">Contact</a>
+        <div class="flex flex-col md:flex-row gap-2 md:gap-4 w-full justify-center md:justify-start nav-buttons">
+            <a href="welcome.html" class="text-white font-bold px-3 py-2 hover:bg-gray-700 rounded-md text-center menu-button">About</a>
+            <a href="index.html" class="text-white font-bold px-3 py-2 hover:bg-gray-700 rounded-md text-center menu-button">Menu</a>
+            <a href="contact.html" class="text-white font-bold px-3 py-2 hover:bg-gray-700 rounded-md text-center menu-button">Contact</a>
         </div>
         <div class="flex items-center ml-auto gap-4 mt-4 md:mt-0">
             <!-- Contact details will go here -->
